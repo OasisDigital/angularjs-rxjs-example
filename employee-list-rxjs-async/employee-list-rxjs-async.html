@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col s12 m6">
+    <section class="card">
+      <div class="card-content">
+        <div class="card-title">Employees</div>
+
+        <form class="row" autocomplete="off">
+          <div class="col s6">
+            <label for="nameFilter">Name Filter</label>
+            <input id="nameFilter" type="text"
+              ng-model="$ctrl.nameFilter"
+              ng-change="$ctrl.nameFilter$.next($ctrl.nameFilter)">
+          </div>
+          <div class="col s6">
+            <label for="sort">Sort By</label>
+            <select id="sort" type="text"
+              ng-model="$ctrl.sort"
+              ng-change="$ctrl.sort$.next($ctrl.sort);">
+              <option value="last_name">Last Name</option>
+              <option value="hours_worked">Hours Worked</option>
+            </select>
+          </div>
+        </form>
+
+        <table class="bordered disable-select">
+          <tr ng-repeat="employee in $ctrl.filteredList$ | async:this"
+            ng-click="$ctrl.selectedId$.next(employee.id);"
+            ng-style="{backgroundColor: employee.id == ($ctrl.selectedId$ | async:this) ? 'yellow' : ''}">
+            <td>
+              <a href="#">{{employee.first_name}}</a>
+            </td>
+            <td>
+              <a href="#">{{employee.last_name}}</a>
+            </td>
+            <td>
+              <a href="#">{{employee.hours_worked}}</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <section class="col s12 m6">
+    <employee-detail-view employee="$ctrl.selectedEmployee$ | async:this"></employee-detail-view>
+  </section>
+</div>

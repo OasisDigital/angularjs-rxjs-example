@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Filtered List with Jittery API</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <div class="brand-logo left">
+          <a href="https://angularbootcamp.com"></a>
+          <span>Filtered List with Jittery API - via Promises</span>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <employee-list-promise></employee-list-promise>
+    </div>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/lodash/lodash.js"></script>
+    <script src="js/app.module.js"></script>
+    <script src="js/employee-loader.js"></script>
+    <script src="js/random-promise-delay.js"></script>
+    <script src="employee-detail-view/employee-detail-view.js"></script>
+    <script src="employee-list-promise/employee-list-promise.js"></script>
+  </body>
+</html>

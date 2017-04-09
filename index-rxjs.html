@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Filtered List with Jittery API</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <div class="brand-logo left">
+          <a href="https://angularbootcamp.com"></a>
+          <span>Filtered List with Jittery API - via RxJS</span>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <employee-list-rxjs-async></employee-list-rxjs-async>
+    </div>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/lodash/lodash.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular1-async-filter/async-filter.js"></script>
+    <script src="js/app-with-rxjs.module.js"></script>
+    <script src="js/employee-loader.js"></script>
+    <script src="js/random-promise-delay.js"></script>
+    <script src="employee-detail-view/employee-detail-view.js"></script>
+    <script src="employee-list-rxjs-async/employee-list-rxjs-async.js"></script>
+  </body>
+</html>
