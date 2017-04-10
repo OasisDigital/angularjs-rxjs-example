@@ -1,17 +1,26 @@
 # AngularJS Promise / RxJS Comparison
 
+[![Talk video thumbnail](https://img.youtube.com/vi/XY9VPrKuJaA/0.jpg)](https://www.youtube.com/watch?v=XY9VPrKuJaA)
+
 ## Introduction
 
 This small example application is meant to illustrate that:
 
-* Straightforward AngularJS 1.x promise-based application often have defects in
-  real-world conditions.
+* Straightforward AngularJS 1.x promise-based applications often have defects in
+  real-world conditions of variale backend response latency.
 * These can be easily avoided using RxJS...
-* ... which is also more future-ready anyway.
+* ... which is also more future-ready
+* ... and often requires less code.
 
-Blog post: TODO
+## Wait - AngularJS in 2017?
 
-Video: TODO
+At Oasis Digital, we don't use AngularJS in any new applications, and only have
+a few of our own applications still using AngularJS. We moved early and eagerly
+to Angular (2+). But we still teach AngularJS, and assist customers with
+AngularJS, who have large, complex, business-critical applications built on it.
+
+Therefore - yes - we still spend a (very) small portion of our time thinking
+about AngularJS in 2017.
 
 ## Running the demo
 
